@@ -37,6 +37,16 @@ func initialize() {
 		flag.PrintDefaults()
 	}
 	flag.Parse()
+	if projectName == "" {
+		fmt.Println("Project name is required")
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
+	if projectPath == "" {
+		fmt.Println("Project path is required")
+		flag.PrintDefaults()
+		os.Exit(1)
+	}
 
 }
 
